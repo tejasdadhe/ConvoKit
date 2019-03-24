@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    
+    
+    <LinearLayout
+        android:id="@+id/quoted_message_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:background="@drawable/quoted_message_background"
+        >
+
+        <LinearLayout
+            android:id="@+id/quoted_audio_message"
+            android:layout_width="@dimen/max_width_thumbnail"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/button_dimension"
+                android:layout_height="@dimen/button_dimension"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/quoted_audio_message_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/max_width_quoted_text"
+                    android:textStyle="bold"
+                    android:text="Author's Name"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/max_width_quoted_text"
+                    android:text="Audio Message"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/quoted_media_message"
+            android:layout_width="@dimen/max_width_thumbnail"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/button_dimension"
+                android:layout_height="@dimen/button_dimension"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/quoted_media_message_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/max_width_quoted_text"
+                    android:textStyle="bold"
+                    android:text="Author's Name"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/max_width_quoted_text"
+                    android:text="Image Message"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/quoted_attachment_message"
+            android:layout_width="@dimen/max_width_thumbnail"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/button_dimension"
+                android:layout_height="@dimen/button_dimension"
+                android:background="#fff"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/quoted_attachment_message_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/max_width_quoted_text"
+                    android:textStyle="bold"
+                    android:text="Author's Name"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/max_width_quoted_text"
+                    android:text="Attachment"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/quoted_text_message"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/quoted_text_message_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/max_width_quoted_text"
+                android:textStyle="bold"
+                android:text="Author's Name"/>
+            <TextView
+                android:id="@+id/quoted_message_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/max_width_quoted_text"
+                android:text="@string/sample_text_short"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/attachment_holder"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/message_text">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/media_message_holder"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/media_thumbnail"
+                android:layout_width="@dimen/max_width_thumbnail"
+                android:layout_height="@dimen/max_width_thumbnail"
+                android:visibility="visible"/>
+
+            <ProgressBar
+                android:id="@+id/media_progress_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                android:min="0"
+                android:max="100"
+                app:layout_constraintBottom_toBottomOf="@+id/media_thumbnail"
+                app:layout_constraintEnd_toEndOf="@+id/media_thumbnail"
+                app:layout_constraintStart_toStartOf="@+id/media_thumbnail"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/play_button"
+                android:layout_width="@dimen/button_dimension"
+                android:layout_height="@dimen/button_dimension"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:background="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/media_thumbnail"
+                app:layout_constraintEnd_toEndOf="@+id/media_thumbnail"
+                app:layout_constraintStart_toStartOf="@+id/media_thumbnail"
+                app:layout_constraintTop_toTopOf="@+id/media_thumbnail" />
+
+            <ImageButton
+                android:id="@+id/download_button"
+                android:layout_width="@dimen/button_dimension"
+                android:layout_height="@dimen/button_dimension"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:background="@drawable/download_button"
+                app:layout_constraintBottom_toBottomOf="@+id/media_thumbnail"
+                app:layout_constraintEnd_toEndOf="@+id/media_thumbnail"
+                app:layout_constraintStart_toStartOf="@+id/media_thumbnail"
+                app:layout_constraintTop_toTopOf="@+id/media_thumbnail" />
+
+            <ImageButton
+                android:id="@+id/upload_button"
+                android:layout_width="@dimen/button_dimension"
+                android:layout_height="@dimen/button_dimension"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:background="@drawable/upload_button"
+                app:layout_constraintBottom_toBottomOf="@+id/media_thumbnail"
+                app:layout_constraintEnd_toEndOf="@+id/media_thumbnail"
+                app:layout_constraintStart_toStartOf="@+id/media_thumbnail"
+                app:layout_constraintTop_toTopOf="@+id/media_thumbnail" />
+
+
+            <ImageButton
+                android:id="@+id/cancel_download_button"
+                android:layout_height="38dp"
+                android:layout_width="38dp"
+                android:background="@drawable/cancel_button"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/media_progress_indicator"
+                app:layout_constraintEnd_toEndOf="@+id/media_progress_indicator"
+                app:layout_constraintStart_toStartOf="@+id/media_progress_indicator"
+                app:layout_constraintTop_toTopOf="@+id/media_progress_indicator" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/audio_message_holder"
+            android:layout_width="@dimen/max_width_thumbnail"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="1"
+            android:gravity="center">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:id="@+id/audio_loader"
+                    android:layout_width="@dimen/button_dimension"
+                    android:layout_height="@dimen/button_dimension"
+                    android:visibility="gone"/>
+                <ImageButton
+                    android:id="@+id/audio_download_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/download_button"
+                    android:visibility="visible"
+                    style="@style/AppTheme"/>
+
+                <ImageButton
+                    android:id="@+id/cancel_audio_download_button"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/cancel_button"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/audio_play_button"
+                    android:layout_width="@dimen/button_dimension"
+                    android:layout_height="@dimen/button_dimension"
+                    android:background="@drawable/play_button"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/audio_pause_button"
+                    android:layout_width="@dimen/button_dimension"
+                    android:layout_height="@dimen/button_dimension"
+                    android:background="@drawable/pause_button"
+                    android:visibility="gone"/>
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@+id/textView3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/file_message_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:gravity="center">
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="@dimen/max_width_thumbnail"
+        android:text="@string/sample_text_long"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attachment_holder" />
+
+
+
+</LinearLayout>
