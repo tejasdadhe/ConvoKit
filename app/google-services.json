@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "512247716675",
+    "firebase_url": "https://convokit.firebaseio.com",
+    "project_id": "convokit",
+    "storage_bucket": "convokit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512247716675:android:7f9c29c69cf83d4b",
+        "android_client_info": {
+          "package_name": "com.tejasdadhe.convokitexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512247716675-0vdagmnrha5ng56p2o9vht1j3cdh0jit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tejasdadhe.convokitexample",
+            "certificate_hash": "574ef2969c6ebf1361188b2d6fb5f888c85410e4"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzDq-KymX9Yxk-41Jsb1Z8KVuNhdAsbpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512247716675-djee4u9q23tj81vd4hb7v0a86jpbv3f6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
