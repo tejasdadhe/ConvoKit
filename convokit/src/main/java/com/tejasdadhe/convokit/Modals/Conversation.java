@@ -4,6 +4,7 @@ import android.support.annotation.IntDef;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.util.List;
 
 public class Conversation {
 
@@ -18,7 +19,7 @@ public class Conversation {
     private boolean initialised;
 
 
-    private String[] targetUserIds;
+    private List<String> targetUserIds;
     private String firstUserId;
     private String extraData;
 
@@ -116,11 +117,11 @@ public class Conversation {
         this.initialised = initialised;
     }
 
-    public String[] getTargetUserIds() {
+    public List<String> getTargetUserIds() {
         return targetUserIds;
     }
 
-    public void setTargetUserIds(String[] targetUserIds) {
+    public void setTargetUserIds(List<String> targetUserIds) {
         this.targetUserIds = targetUserIds;
     }
 

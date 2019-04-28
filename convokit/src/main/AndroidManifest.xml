@@ -4,6 +4,7 @@
 
     <application>
         <activity android:name=".ConversationPageActivity" />
+        <activity android:name=".ConversationActivity" />
         <activity android:name=".Activities.UsersListActivity"
             android:label="Convokit"/>
     </application>
